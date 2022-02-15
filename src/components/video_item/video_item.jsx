@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import styles from './card.module.css';
+import styles from './video_item.module.css';
 
-class Card extends Component {
+class VideoItem extends Component {
   render() {
     return (
-      <div className={styles.card} onClick={this.props.videoClick}>
+      <div className={styles.item} onClick={this.props.videoClick}>
         <img
           className={styles.thumbnails}
           src={this.props.thumbnails}
@@ -18,4 +18,4 @@ class Card extends Component {
   }
 }
 
-export default Card;
+export default VideoItem;
