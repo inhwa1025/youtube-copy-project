@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
+import styles from './header.module.css';
 
 class Header extends Component {
   render() {
     return (
-      <div className="header-box">
-        <header className="header">
+      <div className={styles.headerbox}>
+        <header className={styles.header}>
           <img
-            className="header-logo"
+            className={styles.logo}
             src={`${process.env.PUBLIC_URL}/images/logo.png`}
           />
-          <span className="header-text">YouTube</span>
+          <span>YouTube</span>
           <input
             type="text"
-            className="header-input"
+            className={styles.searchinput}
             placeholder="Search"
           />
-          <div className="header-search">
+          <div className={styles.searchbox}>
             <img
-              className="header-search-img"
+              className={styles.searchimg}
               type="submit"
               src={`${process.env.PUBLIC_URL}/images/search.png`}
             />

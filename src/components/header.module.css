@@ -1,0 +1,45 @@
+.headerbox {
+  text-align: center;
+}
+
+header {
+  font-size: 2rem;
+  color: white;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  background-color: black;
+  font-weight: bold;
+}
+
+.logo {
+  padding: 0.5em;
+  margin-left: 0.5em;
+  margin-right: 0.2em;
+}
+
+.searchinput {
+  font-size: 1rem;
+  width: 80%;
+  height: 40px;
+  margin-left: 0.5em;
+  margin-right: 0em;
+  border: none;
+  border-radius: 2px;
+}
+
+.searchbox {
+  width: 45px;
+  height: 40px;
+  margin-right: 0.5em;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 2px;
+  background-color: rgb(58, 56, 56);
+}
+
+.searchimg {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
