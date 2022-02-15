@@ -4,16 +4,19 @@ import styles from './video_item.module.css';
 class VideoItem extends Component {
   render() {
     return (
-      <div className={styles.item} onClick={this.props.videoClick}>
-        <img
-          className={styles.thumbnails}
-          src={this.props.thumbnails}
-        />
-        <span className={styles.content}>
-          <li className={styles.videoTitle}>{this.props.videoTitle}</li>
-          <li className={styles.channelTitle}>{this.props.channelTitle}</li>
-        </span>
-      </div>
+      <li className={styles.container} onClick={this.props.videoClick}>
+        <div className={styles.video}>
+          <img
+            className={styles.thumbnails}
+            src={this.props.thumbnails}
+            alt="video thumbnails"
+          />
+          <div className={styles.metadata}>
+            <p className={styles.title}>{this.props.videoTitle}</p>
+            <p className={styles.channel}>{this.props.channelTitle}</p>
+          </div>
+        </div>
+      </li>
     );
   }
 }

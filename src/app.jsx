@@ -15,7 +15,7 @@ function App() {
     };
 
     fetch(
-      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=AIzaSyBBqYH4Y2P6B9SriMUcyj6viCRiXzllfS8", 
+      "https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=25&key=", 
       requestOptions
     )
       .then(response => response.json())
