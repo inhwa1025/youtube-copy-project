@@ -1,0 +1,33 @@
+.card {
+  float: left;
+  width: 500px;
+  height: 120px;
+  margin: 10px 10px 10px 10px;
+  padding: 10px 10px;
+  border-radius: 5px;
+  box-shadow: 1px 1px 1px 1px rgb(228, 226, 216);
+  border-bottom: 0.1em;
+  vertical-align: middle;
+}
+
+.thumbnails {
+  height: 100px;
+  width: auto;
+  margin-right: 1em;
+  float: left;
+}
+
+.content {
+  vertical-align: middle;
+}
+
+.videoTitle {
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+.channelTitle {
+  font-size: 0.8rem;
+  color: rgb(80, 80, 80);
+  list-style-type: none;
+}
