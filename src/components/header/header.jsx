@@ -14,7 +14,11 @@ const Header = (props) => (
         className={styles.searchinput}
         placeholder="Search"
       />
-      <button type="submit" className={styles.searchbox}>
+      <button 
+        type="submit" 
+        className={styles.searchbox}
+        // onClick={onClick}
+      >
         <img
           className={styles.searchimg}
           src={`/images/search.png`}
