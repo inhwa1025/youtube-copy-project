@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import './app.css';
+import style from './app.module.css';
 import Header from './components/header/header';
 import VideoList from './components/video_list/video_list';
 import PlayVideo from './components/playVideo';
@@ -24,7 +24,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className={style.app}>
       <Header />
       <VideoList 
         videoList={videos}
@@ -32,50 +32,8 @@ function App() {
       {/* <PlayVideo 
         Video={this.state.selectVideo}
       /> */}
-    </>
+    </div>
   );
 }
-
-// class App extends Component {
-//   state = {
-//     apiLoading: false,
-//     ItemList: []
-//   };
-
-//   loadItem = async () => {
-//     axios
-//       .get('./popularexample.json')
-//       .then(popular => {
-//         this.setState({ 
-//           apiLoading: true,
-//           ItemList: popular.data.items
-//         });
-//       })
-//       .catch(e => {  // API 호출이 실패한 경우
-//         console.error(e);  // 에러표시
-//         this.setState({  
-//           apiLoading: false
-//         });
-//       });
-//   };
-
-//   componentDidMount() {
-//     this.loadItem();  // loadItem 호출
-//   };
-
-//   render() {
-//     return (
-//       <>
-//         <Header />
-//         <Videos 
-//           videoList={this.state.ItemList}
-//         />
-//         <PlayVideo 
-//           // Video={this.state.selectVideo}
-//         />
-//       </>
-//     );
-//   }
-// }
 
 export default App;
