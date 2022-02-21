@@ -1,8 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component, useRef } from 'react';
 import styles from './header.module.css';
 
-const Header = (props) => (
-  <div className={styles.headerbox}>
+const Header = ({onSearch}) => {
+  const inputRef = useRef();
+
+  const handleSearch = () => {
+    const value = inputRef.current.value;
+    onSearch(value);
+  };
+
+  const onClick = () => {
+    handleSearch();
+  };
+
+  const onKeyPress = (event) => {
+    if(event.key === 'Enter') {
+      handleSearch();
+    }
+  };
+
+  return(
     <header className={styles.header}>
       <img
         className={styles.logo}
@@ -10,14 +27,16 @@ const Header = (props) => (
       />
       <span>YouTube</span>
       <input
+        ref={inputRef}
         type="text"
         className={styles.searchinput}
         placeholder="Search"
+        onKeyPress={onKeyPress}
       />
       <button 
         type="submit" 
         className={styles.searchbox}
-        // onClick={onClick}
+        onClick={onClick}
       >
         <img
           className={styles.searchimg}
@@ -25,7 +44,7 @@ const Header = (props) => (
         />
       </button>
     </header>
-  </div>
-);
+  )
+};
 
 export default Header;
